@@ -4,7 +4,7 @@ import streamlit as st
 
 from agent import Agent
 
-st.set_page_config(page_title="AskPDF")
+st.set_page_config(page_title="NASA TECHNICAL DOCUMENTS")
 
 
 def read_and_save_file():
@@ -32,7 +32,7 @@ def main():
         else:
             st.session_state["agent"] = None
 
-    st.header("AskPDF")
+    st.header("NASA TECHNICAL DOCUMENTS")
 
     if st.text_input("OpenAI API Key", value=st.session_state["OPENAI_API_KEY"], key="input_OPENAI_API_KEY"):
         if len(st.session_state["input_OPENAI_API_KEY"]) > 0 and st.session_state["input_OPENAI_API_KEY"] != st.session_state["OPENAI_API_KEY"]:
@@ -61,7 +61,7 @@ def main():
         st.markdown(agent_text)
 
     st.divider()
-    st.markdown("Source code: [Github](https://github.com/viniciusarruda/askpdf)")
+    st.markdown("Source code: [Github](https://github.com/MGASALUCAS/summarize pdf)")
 
 
 if __name__ == "__main__":
